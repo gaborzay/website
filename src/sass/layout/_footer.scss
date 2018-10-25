@@ -1,0 +1,17 @@
+@import "../abstracts/variables";
+
+.Footer {
+  background-color: $color-primary;
+  text-align: center;
+  padding: 10px;
+
+  &__link {
+    margin: 10px;
+
+    &:link,
+    &:visited {
+      color: $color-secondary;
+      text-decoration: none;
+    }
+  }
+}

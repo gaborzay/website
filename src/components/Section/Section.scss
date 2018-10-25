@@ -1,0 +1,21 @@
+.Section {
+  padding: 5px;
+  margin-bottom: 2rem;
+  clear: both;
+
+  &:not(:last-child) {
+    border-bottom: solid lightblue 2px;
+  }
+
+  p {
+    margin-bottom: 5px;
+  }
+
+  &__heading {
+
+  }
+
+  &__content {
+
+  }
+}

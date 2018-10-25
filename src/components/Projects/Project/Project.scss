@@ -1,0 +1,35 @@
+.Project {
+  padding: 5px;
+  box-shadow: 0 0 1px 1px;
+  border-radius: 3px;
+  margin: 5px 0 10px 0;
+
+  &__heading {
+    text-transform: capitalize;
+  }
+
+  &__status {
+    font-size: 1rem;
+  }
+
+  &__description {
+    clear: both;
+  }
+
+  &__technologies {
+
+  }
+
+  &__links {
+    text-align: right;
+  }
+
+  &__link {
+    &:link,
+    &:visited {
+      text-decoration: none;
+      margin: 5px;
+      color: black;
+    }
+  }
+}

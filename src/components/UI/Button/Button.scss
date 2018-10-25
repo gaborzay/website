@@ -1,0 +1,23 @@
+@import '../../../sass/abstracts/variables';
+
+.Button {
+  display: inline-block;
+  margin: 5px;
+  border: 1px solid $color-primary;
+  background-color: $color-primary;
+  border-radius: 5px;
+  min-width: 8rem;
+  text-align: center;
+  font-size: 3rem;
+
+  &__link {
+    &:link,
+    &:visited {
+      color: $color-white;
+    }
+  }
+
+  &__icon {
+    //
+  }
+}
