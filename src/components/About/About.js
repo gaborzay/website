@@ -4,9 +4,8 @@ import './About.scss';
 const about = (props) => {
   return (
     <div className="About">
-      <div className="About__left">
+      <div className="About__image">
         <img
-          className="About__image"
           src="/assets/img/me.jpg"
           alt="Gabor Zay"
         />
@@ -20,9 +19,9 @@ const about = (props) => {
           mountains,
           riding around the seawall, or walking around the city taking
           pictures.</p>
-        <div style={{textAlign: 'center'}}>
-          {props.children}
-        </div>
+      </div>
+      <div className="About__links">
+        {props.children}
       </div>
     </div>
   );

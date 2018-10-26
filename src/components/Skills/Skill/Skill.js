@@ -7,10 +7,14 @@ const skill = (props) => {
       const img = skill.img.url ?
         <img className="Skill__image" src={skill.img.url} alt={skill.name}/> :
         null;
+      const quantity = skill.experience ?
+        <div className="Skill__quantity">{skill.experience} year(s)</div>
+        : null;
       return (
         <div className="Skill__individual">
-          {img}
           <div className="Skill__name">{skill.name}</div>
+          {img}
+          {quantity}
           <div className="Skill__category">{skill.category}</div>
         </div>
       );

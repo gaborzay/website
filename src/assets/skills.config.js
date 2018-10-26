@@ -4,46 +4,47 @@ export const experience = [
   {
     name: "Application and Data",
     skills: [
-      dictionary['JAVASCRIPT'],
-      dictionary['HTML'],
-      dictionary['CSS'],
-      dictionary['PHP'],
-      dictionary['JQUERY'],
-      dictionary['BOOTSTRAP'],
-      dictionary['HIGHCHARTS'],
-      dictionary['LARAVEL'],
-      dictionary['NGINX'],
-      dictionary['APACHE'],
-      dictionary['MYSQL'],
-      dictionary['AMAZON_EC2'],
-      dictionary['REDIS'],
-      dictionary['AMAZON_S3'],
-      dictionary['AMAZON_RDS'],
+      {...dictionary['HTML'], experience: '+3'},
+      {...dictionary['CSS'], experience: '+3'},
+      {...dictionary['JAVASCRIPT'], experience: '+3'},
+      {...dictionary['JQUERY'], experience: '+3'},
+      {...dictionary['BOOTSTRAP'], experience: '+3'},
+      {...dictionary['HIGHCHARTS'], experience: '+3'},
+      {...dictionary['PHP'], experience: '+3'},
+      {...dictionary['MYSQL'], experience: '+3'},
+      {...dictionary['LARAVEL'], experience: '+1'},
+      {...dictionary['CAKEPHP'], experience: '+1'},
+      {...dictionary['APACHE'], experience: '+1'},
+      {...dictionary['NGINX'], experience: '+1'},
+      {...dictionary['AMAZON_EC2'], experience: '+1'},
+      {...dictionary['REDIS'], experience: '<1'},
+      {...dictionary['AMAZON_S3'], experience: '<1'},
+      {...dictionary['AMAZON_RDS'], experience: '<1'},
     ],
   },
   {
     name: "Utilities",
     skills: [
-      dictionary['GOOGLE_ANALYTICS'],
-      dictionary['AMAZON_ROUTE_53']
+      {...dictionary['GOOGLE_ANALYTICS'], experience: '<1'},
+      {...dictionary['AMAZON_ROUTE_53'], experience: '<1'},
     ]
   },
   {
     name: "DevOps",
     skills: [
-      dictionary['BITBUCKET'],
-      dictionary['VAGRANT'],
-      dictionary['SENTRY'],
-      dictionary['JENKINS'],
-      dictionary['PAPERTRAIL'],
+      {...dictionary['BITBUCKET'], experience: '+3'},
+      {...dictionary['VAGRANT'], experience: '+1'},
+      {...dictionary['SENTRY'], experience: '<1'},
+      {...dictionary['JENKINS'], experience: '<1'},
+      {...dictionary['PAPERTRAIL'], experience: '<1'},
     ]
   },
   {
     name: "Business Tools",
     skills: [
-      dictionary['MS_TEAMS'],
-      dictionary['HIPCHAT'],
-      dictionary['ASANA'],
+      {...dictionary['MS_TEAMS'], experience: '+1'},
+      {...dictionary['HIPCHAT'], experience: '+2'},
+      {...dictionary['ASANA'], experience: '+3'},
     ]
   },
 ];

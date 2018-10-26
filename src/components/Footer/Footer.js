@@ -1,5 +1,5 @@
 import React from 'react';
-import '../../sass/layout/_footer.scss';
+import './Footer.scss';
 
 const footer = (props) => {
   const links = props.links.map(link => (
