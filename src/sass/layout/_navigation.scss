@@ -2,9 +2,11 @@
 @import "../abstracts/mixins";
 
 .Navigation {
-  border-bottom: 1px solid $color-primary-light;
   background-color: $color-primary;
-  height: 7rem;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 99;
 
   &__checkbox {
     display: none;
@@ -29,14 +31,20 @@
     color: $color-white;
   }
 
+  &__nav {
+    background-image: linear-gradient($color-primary, $color-grey-dark-1);
+    display: none;
+    z-index: 1500;
+  }
+
   &__heading {
     font-size: $font-heading-size;
-    line-height: 3rem;
+    line-height: 4rem;
   }
 
   &__subheading {
     font-size: $font-subheading-size;
-    line-height: 2rem;
+    line-height: 3rem;
   }
 
   // ICON
@@ -79,18 +87,6 @@
     right: .5rem;
     background-image: radial-gradient($color-primary-light, $color-primary);
     z-index: 1000;
-    transition: transform .8s cubic-bezier(.86, 0, .07, 1);
-  }
-
-  &__nav {
-    position: fixed;
-    background-image: linear-gradient($color-primary-light, $color-primary);
-    top: 0;
-    left: -100rem;
-    z-index: 1500;
-    opacity: 0;
-    width: 0;
-    transition: all .8s cubic-bezier(.68, -.55, .265, 1.55);
   }
 
   &__list {
@@ -136,9 +132,7 @@
   }
 
   &__checkbox:checked ~ &__nav {
-    opacity: 1;
-    width: 100%;
-    left: 0;
+    display: block;
   }
 
   &__button:hover &__icon::before {

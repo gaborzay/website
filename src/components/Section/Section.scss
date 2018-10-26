@@ -1,10 +1,10 @@
 .Section {
-  padding: 5px;
+  padding: 1rem;
   margin-bottom: 2rem;
   clear: both;
 
   &:not(:last-child) {
-    border-bottom: solid lightblue 2px;
+    border-bottom: solid #eee 2px;
   }
 
   p {

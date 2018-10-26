@@ -1,14 +1,20 @@
 .Skill {
 
   &__heading {
+    text-transform: capitalize;
+    background-color: #333;
+    color: white;
+    padding: 3px 5px;
+    border-radius: 5px;
   }
 
   &__content {
+    padding: 3px 5px;
   }
 
   &__image {
-    width: 10rem;
-    height: 10rem;
+    width: 8rem;
+    height: 8rem;
     background-color: white;
     padding: 3px;
   }

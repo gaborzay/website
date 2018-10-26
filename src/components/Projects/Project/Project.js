@@ -20,11 +20,13 @@ const project = (props) => {
       <div className="Project__heading">
         <strong>{heading}</strong>
       </div>
-      <div className="Project__status">Last Commit: {lastCommit}</div>
-      <p className="Project__description">{props.description}</p>
-      <div className="Project__links">
-        {website}
-        {github}
+      <div className="Project__content">
+        <div className="Project__status">Last Commit: {lastCommit}</div>
+        <p className="Project__description">{props.description}</p>
+        <div className="Project__links">
+          {website}
+          {github}
+        </div>
       </div>
     </div>
   );

@@ -19,14 +19,14 @@ const links = [
     name: "&copy; 2018 Gabor Zay"
   },
   {
-    href: "https://github.com/gaborzay/",
-    name: "Github",
-    icon: <FaGithub/>
-  },
-  {
     href: "https://www.linkedin.com/in/gaborzay/",
     name: "LinkedIn",
     icon: <FaLinkedinIn/>
+  },
+  {
+    href: "https://github.com/gaborzay/",
+    name: "Github",
+    icon: <FaGithub/>
   },
 ];
 const buttons = links.map(button => {
@@ -103,6 +103,7 @@ class App extends Component {
             />
           </Section>
         </main>
+
         <Footer links={links}/>
       </div>
     );

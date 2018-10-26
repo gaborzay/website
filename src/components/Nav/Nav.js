@@ -10,16 +10,15 @@ const navigation = (props) => {
         <span className="Navigation__icon"></span>
       </label>
 
+      <div className="Navigation__background">&nbsp;</div>
+
       <div className="Navigation__brand">
         <div className="Navigation__heading">Gabor Zay</div>
         <div className="Navigation__subheading">Full Stack Web Developer</div>
       </div>
 
-      <div className="Navigation__background">&nbsp;</div>
-
       <nav className="Navigation__nav">
         <ul className="Navigation__list">
-          <li>&nbsp;</li>
           {Object.values(props.sections).map((section) => {
             return (
               <li key={section.id} className="Navigation__item">

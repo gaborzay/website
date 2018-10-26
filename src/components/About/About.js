@@ -11,7 +11,7 @@ const about = (props) => {
           alt="Gabor Zay"
         />
       </div>
-      <div className="About__right">
+      <div className="About__blurb">
         <p>Hello World!</p>
         <p>I'm a Vancouver based Full Stack Web developer with a
           background in Computing Science from Simon Fraser

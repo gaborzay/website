@@ -1,16 +1,16 @@
 export const personal = [
   {
-    git: "react-card-games",
+    git: "blackjack",
     technologies: ['React.js', 'Redux.js', 'Sass'],
   },
   {
-    git: "",
+    git: "website",
     technologies: ['React.js', 'Sass'],
   },
-  // {
-  //   git: "datastructures-and-algorithms",
-  //   technologies: ['Babel', 'Jest'],
-  // },
+  {
+    git: "datastructures-and-algorithms",
+    technologies: ['Babel', 'Jest'],
+  },
 ];
 
 export const course = [
@@ -26,5 +26,16 @@ export const course = [
     git: "udemy-node-yelp-camp",
     technologies: ['Heroku', 'MongoDB', 'Express.js', 'Node.js'],
   },
-
+  {
+    git: "udemy-react-native-manager",
+    technologies: [],
+  },
+  {
+    git: "udemy-node-patatap-clone",
+    technologies: [],
+  },
+  {
+    git: "udemy-node-color-game",
+    technologies: [],
+  },
 ];
