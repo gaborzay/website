@@ -14,11 +14,13 @@ const project = (props) => {
     rel="noopener noreferrer">Website</a> : null;
   const lastCommit = new Date(props.updated_at).toUTCString();
   const heading = props.name.split('-').join(' ');
+  const techStack = props.tech.join(', ');
 
   return (
     <div className="Project">
       <div className="Project__heading">
         <strong>{heading}</strong>
+        <div className="Project__stack">{techStack}</div>
       </div>
       <div className="Project__content">
         <div className="Project__status">Last Commit: {lastCommit}</div>

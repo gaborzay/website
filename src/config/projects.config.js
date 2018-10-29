@@ -1,26 +1,22 @@
 export const personal = [
   {
     git: "blackjack",
-    technologies: ['React.js', 'Redux.js', 'Sass'],
+    technologies: ['React', 'Redux', 'Sass'],
   },
   {
     git: "website",
-    technologies: ['React.js', 'Sass'],
-  },
-  {
-    git: "datastructures-and-algorithms",
-    technologies: ['Babel', 'Jest'],
+    technologies: ['React', 'Sass'],
   },
 ];
 
 export const course = [
   {
     git: "udemy-react-burger-builder",
-    technologies: ['React.js', 'Redux.js', 'Sass'],
+    technologies: ['React', 'Redux', 'Sass'],
   },
   {
     git: "udemy-sass-natours",
-    technologies: ['React.js', 'Redux.js', 'Sass'],
+    technologies: ['Sass'],
   },
   {
     git: "udemy-node-yelp-camp",
@@ -28,14 +24,14 @@ export const course = [
   },
   {
     git: "udemy-react-native-manager",
-    technologies: [],
+    technologies: ['React Native', 'Redux'],
   },
   {
     git: "udemy-node-patatap-clone",
-    technologies: [],
+    technologies: ['HTML', 'CSS', 'JavaScript'],
   },
   {
     git: "udemy-node-color-game",
-    technologies: [],
+    technologies: ['HTML', 'CSS', 'JavaScript'],
   },
 ];

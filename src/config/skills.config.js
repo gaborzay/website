@@ -42,9 +42,9 @@ export const experience = [
   {
     name: "Business Tools",
     skills: [
-      {...dictionary['MS_TEAMS'], experience: '+1'},
-      {...dictionary['HIPCHAT'], experience: '+2'},
       {...dictionary['ASANA'], experience: '+3'},
+      {...dictionary['HIPCHAT'], experience: '+2'},
+      {...dictionary['MS_TEAMS'], experience: '+1'},
     ]
   },
 ];

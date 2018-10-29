@@ -8,9 +8,9 @@ import Skills from '../../components/Skills/Skills';
 import Footer from '../../components/Footer/Footer';
 import Button from '../../components/UI/Button/Button';
 import {FaLinkedinIn, FaGithub} from "react-icons/fa";
-import sections from '../../assets/sections.config';
-import {personal, course} from '../../assets/projects.config';
-import {experience} from '../../assets/skills.config';
+import sections from '../../config/sections.config';
+import {personal, course} from '../../config/projects.config';
+import {experience} from '../../config/skills.config';
 import axiosGit from '../../axios-git';
 
 const links = [
@@ -48,8 +48,9 @@ class App extends Component {
         axiosGit.get(project.git)
           .then(response => {
             const updateArray = [...this.state[stateProjects]];
-            updateArray.push(response.data);
-            this.setState({[stateProjects]: updateArray});
+            const responseData = {...response.data, tech: project.technologies};
+            updateArray.push(responseData);
+            this.setState({[stateProjects]: [...updateArray]});
           })
           .catch(error => console.log(error));
       }
