@@ -11,7 +11,7 @@ const footer = (props) => {
   ));
 
   return (
-    <footer className="Footer">
+    <footer className="Footer bg-dark">
       {links}
     </footer>
   );

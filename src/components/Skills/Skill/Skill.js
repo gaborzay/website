@@ -4,27 +4,28 @@ import './Skill.scss';
 const skill = (props) => {
   const skills = (
     props.experience.skills.map((skill) => {
-      const img = skill.img.url ?
-        <img className="Skill__image" src={skill.img.url} alt={skill.name}/> :
-        null;
-      const quantity = skill.experience ?
-        <div className="Skill__quantity">{skill.experience} year(s)</div>
-        : null;
+      const header = (<div className="Skill__name">{skill.name}</div>);
+      const img = (<img className="Skill__image" src={skill.img.url} alt={skill.name}/>);
+      const quantity = (<div className="Skill__quantity">{skill.experience} year(s)</div>);
+      const category = (<div className="Skill__category">{skill.category}</div>);
+
       return (
-        <div className="Skill__individual">
-          <div className="Skill__name">{skill.name}</div>
-          {img}
-          {quantity}
-          <div className="Skill__category">{skill.category}</div>
+        <div className="Skill text-center bg-dark">
+          {header}
+          <div className="Skill__body">
+            {img}
+            {quantity}
+          </div>
+          {category}
         </div>
       );
     })
   );
 
   return (
-    <div className="Skill">
-      <h4 className="Skill__heading">{props.experience.name}</h4>
-      <div className="Skill__content">
+    <div className="Skill__wrapper card">
+      <h4 className="Skill__wrapper__header card-header">{props.experience.name}</h4>
+      <div className="card-body">
         {skills}
       </div>
     </div>

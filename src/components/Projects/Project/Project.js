@@ -2,33 +2,43 @@ import React from 'react';
 import './Project.scss';
 
 const project = (props) => {
-  const github = <a
-    className="Project__link"
-    href={props.html_url}
-    target="_blank"
-    rel="noopener noreferrer">Github</a>;
-  const website = props.homepage ? <a
-    className="Project__link"
-    href={props.homepage}
-    target="_blank"
-    rel="noopener noreferrer">Website</a> : null;
-  const lastCommit = new Date(props.updated_at).toUTCString();
   const heading = props.name.split('-').join(' ');
-  const techStack = props.tech.join(', ');
+  const techStack = props.tech.map(tech => (
+    <button type="button" className="Project__tag btn btn-info btn-sm">{tech}</button>
+  ));
+  const lastCommit = new Date(props.updated_at).toUTCString();
+  const github = (<a
+    href={props.html_url}
+    className="Project__link btn btn-secondary btn-sm"
+    role="button"
+    aria-pressed="true">Github</a>);
+  const website = props.homepage ? (<a
+    href={props.homepage}
+    className="Project__link btn btn-secondary btn-sm"
+    role="button"
+    aria-pressed="true">Website</a>) : null;
 
   return (
-    <div className="Project">
-      <div className="Project__heading">
-        <strong>{heading}</strong>
-        <div className="Project__stack">{techStack}</div>
+    <div className="Project card">
+      <div className="Project__header card-header">
+        {heading}
+        <p className="Project__text card-text">
+          <small className="text-muted">
+            Last updated: {lastCommit}
+          </small>
+        </p>
       </div>
-      <div className="Project__content">
-        <div className="Project__status">Last Commit: {lastCommit}</div>
-        <p className="Project__description">{props.description}</p>
-        <div className="Project__links">
-          {website}
-          {github}
-        </div>
+      <div className="Project__body card-body">
+        <p className="Project__text card-text">
+          {props.description}
+        </p>
+      </div>
+      <div className="Project__tech-stack card-footer">
+        {techStack}
+      </div>
+      <div className="Project__footer card-footer text-right">
+        {website}
+        {github}
       </div>
     </div>
   );

@@ -1,41 +1,44 @@
 .Project {
-  box-shadow: 0 0 1px 1px;
-  border-radius: 3px;
-  margin: 5px 0 10px 0;
+  &.card {
+    margin-bottom: 15px !important;
+  }
 
-  &__heading {
+  &__header {
     text-transform: capitalize;
-    background-color: #333;
-    color: white;
-    padding: 3px 5px;
   }
 
-  &__content {
-    padding: 3px 5px;
+  &__body {
+    //
   }
 
-  &__status {
-    font-size: 1rem;
+  &__title {
+    //
   }
 
-  &__description {
-    clear: both;
+  &__text {
+    //
   }
 
-  &__stack {
-    font-size: 1rem;
+  &__tech-stack {
+    background-color: inherit !important;
+    border-top: none !important;
   }
 
-  &__links {
-    text-align: right;
+  &__footer {
+    //
   }
 
   &__link {
-    &:link,
-    &:visited {
-      text-decoration: none;
-      margin: 5px;
-      color: black;
+    &:not(:last-child) {
+      margin-right: 1rem;
+    }
+  }
+
+  &__tag {
+    margin-bottom: .5rem;
+
+    &:not(:last-child) {
+      margin-right: .5rem;
     }
   }
 }

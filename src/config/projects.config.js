@@ -4,6 +4,10 @@ export const personal = [
     technologies: ['React', 'Redux', 'Sass'],
   },
   {
+    git: "survey-demo",
+    technologies: ['Laravel', 'React', 'Sass'],
+  },
+  {
     git: "website",
     technologies: ['React', 'Sass'],
   },

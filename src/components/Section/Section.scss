@@ -1,21 +1,10 @@
 .Section {
-  padding: 1rem;
-  margin-bottom: 2rem;
-  clear: both;
-
-  &:not(:last-child) {
-    border-bottom: solid #eee 2px;
-  }
-
-  p {
-    margin-bottom: 5px;
-  }
-
   &__heading {
-
+    padding-right: 15px;
+    padding-left: 15px;
   }
 
   &__content {
-
+    //
   }
 }

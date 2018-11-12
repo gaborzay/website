@@ -1,14 +1,10 @@
-.Skills {
-  border: 1px solid #eee;
-  padding: 5px;
-  border-radius: 1rem;
-  margin-bottom: 1rem;
-
+.SkillCategory {
   &__heading {
     padding: 5px;
   }
 
   &__content {
     padding: 5px;
+    margin-bottom: 15px;
   }
 }

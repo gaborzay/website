@@ -1,7 +1,4 @@
-@import "../../sass/abstracts/variables";
-
 .Footer {
-  background-color: $color-primary;
   text-align: center;
   padding: 10px;
 
@@ -10,7 +7,7 @@
 
     &:link,
     &:visited {
-      color: $color-secondary;
+      color: white;
       text-decoration: none;
     }
   }

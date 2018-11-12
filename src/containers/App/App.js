@@ -15,7 +15,7 @@ import axiosGit from '../../axios-git';
 
 const links = [
   {
-    href: "#",
+    href: "/",
     name: "&copy; 2018 Gabor Zay"
   },
   {
@@ -29,7 +29,7 @@ const links = [
     icon: <FaGithub/>
   },
 ];
-const buttons = links.map(button => {
+const linkButtons = links.map(button => {
   if (button.icon) {
     return (<Button text={button.name} href={button.href} icon={button.icon}/>);
   }
@@ -66,36 +66,36 @@ class App extends Component {
     return (
       <div className="App">
         <Nav sections={sections}/>
+        <main className="Main container">
 
-        <main className="Main">
-          <Section
-            sectionId={sections.about.id}
-            classes={["section__about"]}
-            heading={sections.about.heading}>
+          <Section sectionId={sections.about.id}>
 
             <About>
-              {buttons}
+              {linkButtons}
             </About>
           </Section>
 
+          <hr/>
+
           <Section
             sectionId={sections.portfolio.id}
-            classes={["section__portfolio"]}
             heading={sections.portfolio.heading}>
 
             <Projects
               title="Personal Projects"
               projects={this.state.personalProjects}
             />
+
             <Projects
               title="Course Projects"
               projects={this.state.courseProjects}
             />
           </Section>
 
+          <hr/>
+
           <Section
             sectionId={sections.skills.id}
-            classes={["section__skills"]}
             heading={sections.skills.heading}>
 
             <Skills

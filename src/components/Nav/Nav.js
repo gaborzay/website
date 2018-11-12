@@ -1,35 +1,32 @@
 import React from 'react';
-import './Nav.scss';
+// import './Nav.scss';
 
 const navigation = (props) => {
+  const navItems = Object.values(props.sections).map((section) => {
+    return (
+      <li className="nav-item">
+        <a className="nav-link" href={`#${section.id}`}>{section.heading}</a>
+      </li>
+    );
+  });
+
   return (
-    <div className="Navigation">
-      <input className="Navigation__checkbox" id="navi-toggle" type="checkbox" name=""/>
+    <nav className="navbar navbar-dark fixed-top bg-dark">
+      <a className="navbar-brand" href="/">
+        <h5>Gabor Zay</h5>
+        <h6>PHP Full Stack Web Developer</h6>
+      </a>
+      <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
+              aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+        <span className="navbar-toggler-icon"></span>
+      </button>
 
-      <label className="Navigation__button" htmlFor="navi-toggle">
-        <span className="Navigation__icon"></span>
-      </label>
-
-      <div className="Navigation__background">&nbsp;</div>
-
-      <div className="Navigation__brand">
-        <div className="Navigation__heading">Gabor Zay</div>
-        <div className="Navigation__subheading">Full Stack Web Developer</div>
-      </div>
-
-      <nav className="Navigation__nav">
-        <ul className="Navigation__list">
-          {Object.values(props.sections).map((section) => {
-            return (
-              <li key={section.id} className="Navigation__item">
-                <a className="Navigation__link"
-                   href={`#${section.id}`}> {section.heading}</a>
-              </li>
-            );
-          })}
+      <div className="collapse navbar-collapse" id="navbarTogglerDemo02">
+        <ul className="navbar-nav mr-auto mt-2 mt-lg-0">
+          {navItems}
         </ul>
-      </nav>
-    </div>
+      </div>
+    </nav>
   );
 };
 

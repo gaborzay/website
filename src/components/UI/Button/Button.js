@@ -3,13 +3,13 @@ import './Button.scss';
 
 const button = (props) => {
   return (
-    <div className="Button">
-      <a className="Button__link" href={props.href}>
-        <div className="Button__icon">
-          {props.icon}
-        </div>
-      </a>
-    </div>
+    <a
+      href={props.href}
+      className="Button btn btn-outline-primary btn-lg"
+      role="button"
+      aria-pressed="true">
+      {props.icon}
+    </a>
   );
 };
 
