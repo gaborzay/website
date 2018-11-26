@@ -1,32 +1,29 @@
 import React from 'react';
-// import './Nav.scss';
 
 const navigation = (props) => {
-  const navItems = Object.values(props.sections).map((section) => {
+  const navLinks = Object.values(props.sections).map((section) => {
     return (
-      <li className="nav-item">
-        <a className="nav-link" href={`#${section.id}`}>{section.heading}</a>
-      </li>
+      <a
+        key={section.id}
+        className={"nav-link bg-dark text-white"}
+        href={`#${section.id}`}>{section.heading}</a>
     );
   });
 
   return (
-    <nav className="navbar navbar-dark fixed-top bg-dark">
-      <a className="navbar-brand" href="/">
-        <h5>Gabor Zay</h5>
-        <h6>PHP Full Stack Web Developer</h6>
-      </a>
-      <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
-              aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-        <span className="navbar-toggler-icon"></span>
-      </button>
-
-      <div className="collapse navbar-collapse" id="navbarTogglerDemo02">
-        <ul className="navbar-nav mr-auto mt-2 mt-lg-0">
-          {navItems}
-        </ul>
+		<nav className={"nav navbar-expand-md navbar-dark bg-dark fixed-top p-2"}>
+      <a className="navbar-brand" href="/">Gabor Zay</a>
+      <button
+        className={"navbar-toggler ml-auto justify-content-right"}
+        data-toggle="collapse"
+        data-target="#navLinks"
+        aria-label="Toggle Navigation">
+				<span className={"navbar-toggler-icon"}></span>
+			</button>
+      <div className={"collapse navbar-collapse justify-content-center"} id="navLinks">
+				{navLinks}
       </div>
-    </nav>
+		</nav>
   );
 };
 

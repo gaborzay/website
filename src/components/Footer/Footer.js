@@ -4,6 +4,7 @@ import './Footer.scss';
 const footer = (props) => {
   const links = props.links.map(link => (
     <a
+      key={link.href}
       className="Footer__link"
       href={link.href}
       dangerouslySetInnerHTML={{__html: link.name}}

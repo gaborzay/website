@@ -1,11 +1,12 @@
 import React from 'react';
-import './Button.scss';
 
 const button = (props) => {
   return (
     <a
       href={props.href}
-      className="Button btn btn-outline-primary btn-lg"
+			target="_blank"
+			rel="noopener noreferrer"
+			className="Button btn btn-outline-primary btn-lg m-2"
       role="button"
       aria-pressed="true">
       {props.icon}

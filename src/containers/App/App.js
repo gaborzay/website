@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import './App.scss';
 import Nav from '../../components/Nav/Nav';
 import Section from '../../components/Section/Section';
 import About from '../../components/About/About';
@@ -7,7 +6,7 @@ import Projects from '../../components/Projects/Projects';
 import Skills from '../../components/Skills/Skills';
 import Footer from '../../components/Footer/Footer';
 import Button from '../../components/UI/Button/Button';
-import {FaLinkedinIn, FaGithub} from "react-icons/fa";
+import {FaLinkedinIn, FaGithub, FaHackerrank} from "react-icons/fa";
 import sections from '../../config/sections.config';
 import {personal, course} from '../../config/projects.config';
 import {experience} from '../../config/skills.config';
@@ -28,10 +27,15 @@ const links = [
     name: "Github",
     icon: <FaGithub/>
   },
+  {
+    href: "https://www.hackerrank.com/Gaborzi",
+    name: "HackerRank",
+    icon: <FaHackerrank/>
+  },
 ];
 const linkButtons = links.map(button => {
   if (button.icon) {
-    return (<Button text={button.name} href={button.href} icon={button.icon}/>);
+    return (<Button key={button.name} text={button.name} href={button.href} icon={button.icon}/>);
   }
   return false;
 });
@@ -68,7 +72,7 @@ class App extends Component {
         <Nav sections={sections}/>
         <main className="Main container">
 
-          <Section sectionId={sections.about.id}>
+          <Section>
 
             <About>
               {linkButtons}

@@ -5,7 +5,7 @@ export const personal = [
   },
   {
     git: "survey-demo",
-    technologies: ['Laravel', 'React', 'Sass'],
+    technologies: ['Laravel', 'React', 'Sass', 'MySql', 'MongoDB'],
   },
   {
     git: "website",

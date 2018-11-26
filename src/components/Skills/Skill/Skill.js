@@ -3,14 +3,15 @@ import './Skill.scss';
 
 const skill = (props) => {
   const skills = (
-    props.experience.skills.map((skill) => {
+    props.experience.skills.map((skill, index) => {
       const header = (<div className="Skill__name">{skill.name}</div>);
       const img = (<img className="Skill__image" src={skill.img.url} alt={skill.name}/>);
       const quantity = (<div className="Skill__quantity">{skill.experience} year(s)</div>);
       const category = (<div className="Skill__category">{skill.category}</div>);
+      const key = skill.name.toLowerCase().replace(' ', '-')+index;
 
       return (
-        <div className="Skill text-center bg-dark">
+        <div key={key} className="Skill text-center bg-dark">
           {header}
           <div className="Skill__body">
             {img}

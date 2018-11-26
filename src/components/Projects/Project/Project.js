@@ -4,7 +4,7 @@ import './Project.scss';
 const project = (props) => {
   const heading = props.name.split('-').join(' ');
   const techStack = props.tech.map(tech => (
-    <button type="button" className="Project__tag btn btn-info btn-sm">{tech}</button>
+    <button key={tech.toLowerCase().replace(' ', '-')} type="button" className="Project__tag btn btn-info btn-sm">{tech}</button>
   ));
   const lastCommit = new Date(props.updated_at).toUTCString();
   const github = (<a

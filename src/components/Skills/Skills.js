@@ -3,8 +3,8 @@ import Skill from './Skill/Skill';
 import './Skills.scss';
 
 const skills = (props) => {
-  const skills = props.skills.map(skill => {
-    return <Skill experience={skill}/>;
+  const skills = props.skills.map((skill, index) => {
+    return <Skill key={index} experience={skill}/>;
   });
 
   return (
